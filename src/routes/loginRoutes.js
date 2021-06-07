@@ -42,6 +42,7 @@ const User=require('../model/Userdata');
              })     //bcrypt ends 
             })       //then
             
+            .catch((err)=> {console.log(err)})
     })              //localstrategy
     
 )
