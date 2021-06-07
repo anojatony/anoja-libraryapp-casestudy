@@ -67,7 +67,7 @@
                     req.flash('success_msg','Registered successfully! Please login to continue')  
                     res.redirect('/login');  //on successful registration redirects to login
                     })
-                    .catch(value=> console.log(value));
+                      
                 }));
         }        //else statement ends here
     })            //
