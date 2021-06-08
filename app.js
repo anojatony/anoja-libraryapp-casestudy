@@ -69,9 +69,6 @@ app.use(session({
     saveUninitialized : true
    }));
 
-// passport
-app.use(passport.initialize());
-app.use(passport.session());
 
 //use flash
    app.use(flash());
@@ -109,7 +106,6 @@ app.get('/',function(req,res){
 
 //logout 
 app.get('/logout',function(req,res){
-    req.logout();    //function provided by passport for logging out from the user session
     req.flash('success_msg','You are logged out');    //succ_msg (flash message)
     res.redirect('/login');                           //redirecting to login
 })
